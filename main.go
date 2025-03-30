@@ -33,8 +33,9 @@ func main() {
 	closer.Bind(cleanup)
 	closer.Bind(cancel)
 
-	shContext := exec.CommandContext(ctx, sh)
+	shContext := exec.CommandContext(ctx, sh, ping[:]...)
 	createNewConsole(shContext)
+
 	err := shContext.Start()
 	log.Println(shContext, "context sh start", err)
 	if err == nil {
@@ -52,6 +53,7 @@ func main() {
 	shell.Stdout = os.Stdout
 
 	time.AfterFunc(time.Second*7, func() {
+		log.Println("AfterFunc closer.Close()")
 		closer.Close()
 	})
 
@@ -62,7 +64,7 @@ func main() {
 		if shell.Process != nil {
 			log.Println(shell, "sh pid", shell.Process.Pid)
 		}
-		log.Println("sh exit", shell, shell.Wait())
+		log.Println(shell, "sh exit", shell.Wait())
 	} else {
 		closer.Hold()
 	}

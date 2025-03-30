@@ -9,6 +9,8 @@ import (
 
 const sh = "cmd"
 
+var ping = []string{"/c", "pause"}
+
 // cmd = exec.Command("cmd.exe", "/C", fmt.Sprintf(`start %s %s`, bin, opt))
 func createNewConsole(cmd *exec.Cmd) {
 	const CREATE_NEW_CONSOLE = 0x10
