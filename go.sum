@@ -1,0 +1,4 @@
+github.com/unixist/go-ps v0.0.0-20160415204547-177148200605 h1:1aunvNyE94aY3jXWvQlKu9XQksjABOVrHfViJOzWFt4=
+github.com/unixist/go-ps v0.0.0-20160415204547-177148200605/go.mod h1:aPdmgUl2jufv+0t/2+UKydtzMcqyKha5h6l8QgBcWyo=
+github.com/xlab/closer v1.1.0 h1:yrDiOXjd/B7pZ3lZkl/EZ1gWrR2M2N5XpBnixynm4mc=
+github.com/xlab/closer v1.1.0/go.mod h1:Ff8YcUPbn5jju6nClrMCmJHQABM0S/obEK0za/1yVMk=
